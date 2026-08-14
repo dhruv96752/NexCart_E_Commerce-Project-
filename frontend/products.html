@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NexCart | Products</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/feedback.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="top-header">
+
+            <a href="index.html" class="logo">
+            <img src="images/nexcart-logo.png" alt="NexCart">
+            </a>
+
+            <div class="delivery">
+                <small>Deliver to</small>
+                <strong>India</strong>
+            </div>
+
+            <div class="search-box">
+
+                <select id="category-select">
+                    <option value="All">All</option>
+                    <option value="Shoes">Shoes</option>
+                    <option value="Clothes">Clothes</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Electronics">Electronics</option>
+                </select>
+
+                <input
+                    type="text"
+                    id="product-search"
+                    placeholder="Search for products..."
+                >
+
+                <button id="search-button">
+                    🔍
+                </button>
+
+            </div>
+
+            <a href="login.html" class="header-item">
+                <small>Hello, Guest</small>
+                <strong data-account>Account</strong>
+            </a>
+
+            <a href="orders.html" class="header-item">
+                <small>Track</small>
+                <strong>Orders</strong>
+            </a>
+
+            <a href="cart.html" class="cart-link">
+                <span class="cart-icon">🛒</span>
+                <strong>Cart <span class="cart-count">0</span></strong>
+            </a>
+
+        </div>
+
+
+<nav class="category-nav">
+
+    <a href="index.html" class="nav-link">
+        Home
+    </a>
+
+    <a href="products.html" class="nav-link">
+        Shop
+    </a>
+
+    <a href="products.html?category=Clothes" class="nav-link">
+        Fashion
+    </a>
+
+    <a href="products.html?category=Shoes" class="nav-link">
+        Shoes
+    </a>
+
+    <a href="products.html?category=Accessories" class="nav-link">
+        Accessories
+    </a>
+
+    <a href="products.html?category=Electronics" class="nav-link">
+        Electronics
+    </a>
+
+    <a href="products.html?category=New" class="nav-link">
+        New Arrivals
+    </a>
+
+    <a href="products.html?category=Deals" class="nav-link">
+        Deals
+    </a>
+
+    <a href="planner.html" class="nav-link smart-link">
+        Smart Shopping
+    </a>
+
+</nav>
+
+    </header>
+
+
+    <!-- PRODUCTS -->
+
+    <main class="products-page">
+
+        <section class="products-header">
+
+            <div>
+
+                <span class="section-label">
+                    NEXCART STORE
+                </span>
+
+                <h1>Explore Products</h1>
+
+                <p>
+                    Find something that fits your style and needs.
+                </p>
+
+            </div>
+
+            <div class="product-count">
+                <span id="product-count">0</span> products
+            </div>
+
+        </section>
+
+
+        <!-- FILTER BAR -->
+
+        <section class="filter-bar">
+
+            <div class="filter-left">
+
+                <span>Category:</span>
+
+                <button
+                    class="filter-btn active"
+                    data-category="All"
+                >
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-category="Shoes"
+                >
+                    Shoes
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-category="Clothes"
+                >
+                    Clothes
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-category="Accessories"
+                >
+                    Accessories
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-category="Electronics"
+                >
+                    Electronics
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCTS WILL COME HERE -->
+
+        <section
+            id="products-container"
+            class="products-grid"
+        >
+
+        </section>
+
+
+        <!-- NO RESULTS -->
+
+        <div
+            id="no-results"
+            class="no-results"
+            style="display: none;"
+        >
+
+            <div>🔎</div>
+
+            <h2>No products found</h2>
+
+            <p>
+                Try another search or category.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <h2>
+                    Nex<span>Cart</span>
+                </h2>
+
+                <p>
+                    A better way to shop online.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>Shop</h4>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="products.html">
+                    Categories
+                </a>
+
+                <a href="products.html">
+                    Deals
+                </a>
+
+            </div>
+
+            <div>
+
+                <h4>Account</h4>
+
+                <a href="#">
+                    My Account
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+                <a href="#">
+                    Orders
+                </a>
+
+            </div>
+
+            <div>
+
+                <h4>NexCart</h4>
+
+                <a href="planner.html">
+                    Smart Shopping
+                </a>
+
+                <a href="#">
+                    About
+                </a>
+
+                <a href="#">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 NexCart. All rights reserved.
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/api.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/page-transition.js"></script>
+
+</body>
+
+</html>
