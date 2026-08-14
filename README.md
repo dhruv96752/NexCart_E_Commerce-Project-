@@ -6,6 +6,14 @@ A vanilla HTML/CSS/JavaScript ecommerce storefront backed by Express and MongoDB
 
 Product search/filter/sort/pagination API; guest cart and wishlist storage; JWT login; profile management; checkout with COD/demo online payment; orders; rule-based Smart Shopping Planner; and protected admin statistics/product tools.
 
+## ⭐ Special Feature – Smart Shopping Planner
+
+NexCart includes a **Smart Shopping Planner** that helps users plan their shopping within a fixed budget. Users can enter their budget and select multiple categories such as Shoes, Clothes, and Accessories. The system then recommends a suitable combination of products while keeping the total cost within the selected budget.
+
+Users can also view the total and remaining budget, replace or remove products, and optimize their shopping plan with lower-cost alternatives when required. The final shopping plan can be added directly to the cart.
+
+This feature makes NexCart more than a traditional e-commerce website by helping users **plan and manage their complete shopping budget in one place**.
+
 ## Stack and structure
 
 - Frontend: HTML5, CSS3, vanilla JavaScript
@@ -13,6 +21,11 @@ Product search/filter/sort/pagination API; guest cart and wishlist storage; JWT 
 - Auth/security: bcryptjs, JWT/cookies, Helmet, CORS, rate limiting
 
 `frontend/` contains pages, styles and browser code. `backend/` contains models, routes, middleware, the planner service and database seeder.
+
+## 🌐 Live Frontend Demo
+
+[🚀 Visit NexCart Live Website](https://nex-cart-e-commerce-project.vercel.app/)
+
 
 ## Install and run
 
