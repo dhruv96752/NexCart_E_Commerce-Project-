@@ -5,7 +5,7 @@ const api = {
         const token = localStorage.getItem('nexcartToken');
 
         const controller = new AbortController();
-        const timer = setTimeout(() => controller.abort(), 10000);
+        const timer = setTimeout(() => controller.abort(), 30000);
 
         try {
             const response = await fetch(API_BASE_URL + path, {
