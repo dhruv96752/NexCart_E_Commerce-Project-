@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{const raw=sessionStorage.getItem('nexcartFlash');if(!raw)return;sessionStorage.removeItem('nexcartFlash');try{const {title,detail}=JSON.parse(raw);showToast(title,detail)}catch(e){}});
