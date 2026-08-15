@@ -22,7 +22,7 @@ This feature makes NexCart more than a traditional e-commerce website by helping
 
 `frontend/` contains pages, styles and browser code. `backend/` contains models, routes, middleware, the planner service and database seeder.
 
-## 🌐 Live Frontend Demo
+## 🌐 Live Full Demo
 
 [🚀 Visit NexCart Live Website](https://nex-cart-e-commerce-project.vercel.app/)
 
