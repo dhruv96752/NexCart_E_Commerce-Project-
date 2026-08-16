@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="css/product-skeleton.css">
 </head>
 
 <body>
@@ -182,6 +183,14 @@
                     Electronics
                 </button>
 
+            </div>
+
+            <div class="filter-controls">
+                <label>Price<input id="min-price" type="number" min="0" placeholder="Min ₹"></label>
+                <label>to<input id="max-price" type="number" min="0" placeholder="Max ₹"></label>
+                <label>Rating<select id="rating-filter"><option value="0">All ratings</option><option value="4">4★ & above</option><option value="4.5">4.5★ & above</option></select></label>
+                <label>Sort<select id="sort-filter"><option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="rating-desc">Top rated</option></select></label>
+                <button class="clear-filters" id="clear-filters" type="button">Clear filters</button>
             </div>
 
         </section>

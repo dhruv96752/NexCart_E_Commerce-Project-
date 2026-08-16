@@ -1,4 +1,5 @@
 /* Supports carts created before MongoDB product ObjectIds were available. */
+function showOrderSuccess(order){const modal=document.createElement('div');modal.className='order-success-backdrop';modal.innerHTML=`<section class="order-success-modal" role="dialog" aria-modal="true" aria-labelledby="order-success-title"><div class="order-success-check">✓</div><h2 id="order-success-title">Order placed successfully!</h2><p>Thank you for shopping with NexCart. We have received your order and will keep you updated about its delivery.</p><div class="order-reference">ORDER #${String(order._id).slice(-6).toUpperCase()}</div><div class="order-success-actions"><button type="button" data-continue>Continue shopping</button><a class="btn" href="orders.html">View my orders</a></div></section>`;document.body.appendChild(modal);modal.querySelector('[data-continue]').onclick=()=>location.href='products.html'}
 function checkout(){
   const root=document.querySelector('#app');
   if(!items().length){root.innerHTML=msg('Your cart is empty.',true);return}
@@ -14,7 +15,7 @@ function checkout(){
       const form=Object.fromEntries(new FormData(event.target));
       const response=await api.post('/orders',{items:safeOrderItems(),shippingAddress:form,paymentMethod:form.paymentMethod,deliveryFee:99});
       NexCart.clear();
-      root.innerHTML=msg(`Order confirmed! Your order number is ${response.order._id}. <a href="orders.html">View orders</a>`);
+      showOrderSuccess(response.order);
     }catch(error){root.querySelector('#out').innerHTML=msg(error.message,true)}
   };
 }
